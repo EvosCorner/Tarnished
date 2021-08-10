@@ -1,0 +1,62 @@
+{
+	"name": "Sprite2",
+	"plugin-id": "Sprite",
+	"sid": 163930411527925,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "health",
+			"type": "number",
+			"desc": "",
+			"sid": 373958212029036
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "NSG_Isometric",
+			"name": "EasyIsometric",
+			"sid": 330640118477265
+		},
+		{
+			"behaviorId": "Pathfinding",
+			"name": "Pathfinding",
+			"sid": 770366391122494
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 800158,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": -0.09375,
+								"y": -0.25
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 487405976815849,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

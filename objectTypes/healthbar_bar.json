@@ -1,0 +1,37 @@
+{
+	"name": "healthbar_bar",
+	"plugin-id": "Sprite",
+	"sid": 184235073645237,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 352,
+						"height": 116,
+						"originX": 0.06818181818181818,
+						"originY": 0.3448275862068966,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3787473,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 357794842064066,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

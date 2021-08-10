@@ -1,0 +1,50 @@
+{
+	"name": "Player_Foot_Check",
+	"plugin-id": "Sprite",
+	"sid": 593506675042200,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Follow_Offset",
+			"type": "number",
+			"desc": "",
+			"sid": 558010941595515
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 553332729596899
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2203046,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 996649719776441,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

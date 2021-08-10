@@ -1,0 +1,980 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Movement",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 348714966819861,
+							"parameters": {
+								"key": 87
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Player_Controller",
+							"sid": 709521292059776,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "up"
+							}
+						}
+					],
+					"sid": 358472005745213
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 918707149872213,
+							"parameters": {
+								"key": 83
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Player_Controller",
+							"sid": 982583237994846,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "down"
+							}
+						}
+					],
+					"sid": 560942526414733
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 977781133789577,
+							"parameters": {
+								"key": 65
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Player_Controller",
+							"sid": 497964241791273,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "left"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Player_Foot_Check",
+							"sid": 111720258473686,
+							"parameters": {
+								"instance-variable": "Follow_Offset",
+								"value": "4"
+							}
+						}
+					],
+					"sid": 534233975647136
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 406815380729236,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Player_Controller",
+							"sid": 136448295357853,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "right"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Player_Foot_Check",
+							"sid": 773209004946042,
+							"parameters": {
+								"instance-variable": "Follow_Offset",
+								"value": "-4"
+							}
+						}
+					],
+					"sid": 842927606758296
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 582946729918107
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "Player_Colour",
+							"sid": 941359976990516,
+							"parameters": {
+								"object": "Player_Controller",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "Player_Outline",
+							"sid": 655569350994894,
+							"parameters": {
+								"object": "Player_Colour",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "set-effect-parameter",
+							"objectClass": "Player_Colour",
+							"sid": 951615114872115,
+							"parameters": {
+								"effect": "\"AdjustHSL\"",
+								"parameter-index": "0",
+								"value": "SliderBar.Value"
+							}
+						},
+						{
+							"id": "set-effect-parameter",
+							"objectClass": "Player_Colour",
+							"sid": 129372285437575,
+							"parameters": {
+								"effect": "\"AdjustHSL\"",
+								"parameter-index": "1",
+								"value": "SliderBar2.Value"
+							}
+						},
+						{
+							"id": "set-effect-parameter",
+							"objectClass": "Player_Colour",
+							"sid": 760511333735273,
+							"parameters": {
+								"effect": "\"AdjustHSL\"",
+								"parameter-index": "2",
+								"value": "SliderBar3.Value"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text",
+							"sid": 217052410518686,
+							"parameters": {
+								"text": "Object.Y & \" \" & Player_Colour.Y"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "Main_Hand",
+							"sid": 902453939118151,
+							"parameters": {
+								"object": "Player_Colour",
+								"image-point-optional": "1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Main_Hand",
+							"sid": 703647638087242,
+							"parameters": {
+								"frame-number": "Main_Hand.Item_ID"
+							}
+						}
+					],
+					"sid": 430626967416645
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 900437294645758,
+							"parameters": {
+								"key": 65
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Player_Colour",
+							"sid": 852473594627087,
+							"parameters": {
+								"state": "mirrored"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Player_Outline",
+							"sid": 735039846637584,
+							"parameters": {
+								"state": "mirrored"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Main_Hand",
+							"sid": 300536972419217,
+							"parameters": {
+								"animation": "\"Active_Item_Flip\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 879086803198049
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 400066851445228,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Player_Colour",
+							"sid": 118368689987921,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Player_Outline",
+							"sid": 155498957478832,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Main_Hand",
+							"sid": 388009395321545,
+							"parameters": {
+								"animation": "\"Active_Item\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 636080933120858
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "Player_Controller",
+							"sid": 745687865796586,
+							"behaviorType": "8Direction"
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Player_Colour",
+							"sid": 102027566912994,
+							"parameters": {
+								"animation": "\"Colour_run_ATK\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Player_Colour",
+							"sid": 153133136670972,
+							"parameters": {
+								"animation": "\"colour_run\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 441910874271632
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "Player_Controller",
+							"sid": 376418793669067,
+							"behaviorType": "8Direction",
+							"isInverted": true
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Player_Colour",
+							"sid": 347950648694966,
+							"parameters": {
+								"animation": "\"Colour_Idle_ATK\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Player_Colour",
+							"sid": 208820515443455,
+							"parameters": {
+								"animation": "\"colour_idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 525662713642455
+				}
+			],
+			"sid": 286184028691493
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Tree Chopping",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "Object",
+							"sid": 651390437977392,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "Player_Controller",
+								"image-point": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Object",
+							"sid": 652014785803102,
+							"parameters": {
+								"instance-variable": "NearPlayer",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 893572857391330
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "Object",
+							"sid": 875397685482198,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "Player_Controller",
+								"image-point": "0"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Object",
+							"sid": 372682063154803,
+							"parameters": {
+								"instance-variable": "NearPlayer",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 465959520942770
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-frame-changed",
+							"objectClass": "Player_Colour",
+							"sid": 325701580607445
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Object",
+							"sid": 671943267669325,
+							"parameters": {
+								"instance-variable": "NearPlayer",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Object",
+							"sid": 973456322843976,
+							"parameters": {
+								"comparison": 0,
+								"number": "0"
+							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Player_Colour",
+							"sid": 981701790645387,
+							"parameters": {
+								"animation": "\"Colour_run_ATK\""
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Player_Colour",
+							"sid": 440821539623002,
+							"parameters": {
+								"comparison": 0,
+								"number": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "Object",
+							"sid": 645931632337970,
+							"parameters": {
+								"instance-variable": "Health",
+								"value": "5"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Object",
+							"sid": 181988175188425,
+							"parameters": {
+								"object": "woodHit",
+								"layer": "1",
+								"image-point": "2",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 763192490364357
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-frame-changed",
+							"objectClass": "Player_Colour",
+							"sid": 725984916821509
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Object",
+							"sid": 169485758689005,
+							"parameters": {
+								"instance-variable": "NearPlayer",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Object",
+							"sid": 876366404611987,
+							"parameters": {
+								"comparison": 0,
+								"number": "0"
+							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Player_Colour",
+							"sid": 486894101552544,
+							"parameters": {
+								"animation": "\"Colour_idle_ATK\""
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Player_Colour",
+							"sid": 601944418212070,
+							"parameters": {
+								"comparison": 0,
+								"number": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "Object",
+							"sid": 854565233634606,
+							"parameters": {
+								"instance-variable": "Health",
+								"value": "5"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Object",
+							"sid": 167449467240189,
+							"parameters": {
+								"object": "woodHit",
+								"layer": "1",
+								"image-point": "2",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 627852281333321
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Object",
+							"sid": 279119125875712,
+							"parameters": {
+								"instance-variable": "Health",
+								"comparison": 3,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Object",
+							"sid": 992636205070602,
+							"parameters": {
+								"instance-variable": "Health",
+								"comparison": 1,
+								"value": "-999"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Object",
+							"sid": 958570970247985,
+							"parameters": {
+								"object": "treeFell",
+								"layer": "1",
+								"image-point": "1",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 306191636550920,
+							"parameters": {
+								"seconds": "0.01"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Object",
+							"sid": 260853091751587,
+							"parameters": {
+								"instance-variable": "ObjectID",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Object",
+							"sid": 886444461018271,
+							"parameters": {
+								"instance-variable": "Health",
+								"value": "-999"
+							}
+						}
+					],
+					"sid": 358035544276016
+				}
+			],
+			"sid": 771755315756000
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 894678715545110,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "is-animation-playing",
+					"objectClass": "Player_Colour",
+					"sid": 772568944630362,
+					"parameters": {
+						"animation": "\"Colour_Idle_ATK\""
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-animation-playing",
+					"objectClass": "Player_Colour",
+					"sid": 396303053244757,
+					"parameters": {
+						"animation": "\"Colour_run_ATK\""
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-animation-playing",
+					"objectClass": "Player_Colour",
+					"sid": 544893213489386,
+					"parameters": {
+						"animation": "\"Colour_run\""
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Player_Colour",
+					"sid": 178157548117192,
+					"parameters": {
+						"animation": "\"Colour_Idle_ATK\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 543329311174348,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Player_Colour",
+					"sid": 846685120299645,
+					"parameters": {
+						"animation": "\"Colour_Idle\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 822436647224197
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 576523865386707,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "is-animation-playing",
+					"objectClass": "Player_Colour",
+					"sid": 295024092979498,
+					"parameters": {
+						"animation": "\"Colour_Idle_ATK\""
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-animation-playing",
+					"objectClass": "Player_Colour",
+					"sid": 594707751458433,
+					"parameters": {
+						"animation": "\"Colour_run\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Player_Colour",
+					"sid": 904454666480048,
+					"parameters": {
+						"animation": "\"Colour_run_ATK\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 283450060195818,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Player_Colour",
+					"sid": 472305403535131,
+					"parameters": {
+						"animation": "\"Colour_run\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 968939593609574
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Object Initialization",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 867824475746124
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Object",
+							"sid": 770297199204384,
+							"parameters": {
+								"frame-number": "Object.ObjectID"
+							}
+						}
+					],
+					"sid": 356537985310386
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 183324506819936
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Object",
+							"sid": 604321397386877,
+							"parameters": {
+								"instance-variable": "ObjectID",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Object",
+							"sid": 469212794776139,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 993130213982065
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "Object",
+							"sid": 152127846180292
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Object",
+							"sid": 498247124689922,
+							"parameters": {
+								"instance-variable": "ObjectID",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Object",
+							"sid": 786601957062330,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 685573985375923
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player_Colour",
+							"sid": 189394061787641,
+							"parameters": {
+								"object": "Object"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Object",
+							"sid": 586633214777732,
+							"parameters": {
+								"instance-variable": "ObjectID",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "Player_Colour",
+							"sid": 769984822587616,
+							"parameters": {
+								"instance-variable": "Health",
+								"value": "random(5,10)"
+							}
+						}
+					],
+					"sid": 393312936158456
+				}
+			],
+			"sid": 410058170477876
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "HUD",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "health",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 327586048056796
+								},
+								{
+									"id": "compare-width",
+									"objectClass": "healthbar_bar",
+									"sid": 272832529087456,
+									"parameters": {
+										"comparison": 3,
+										"width": "0"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-width",
+									"objectClass": "healthbar_bar",
+									"sid": 789655412295074,
+									"parameters": {
+										"width": "Player_Colour.Health * 3.52"
+									}
+								}
+							],
+							"sid": 688920161462753
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-width",
+									"objectClass": "healthbar_bar",
+									"sid": 221546848543907,
+									"parameters": {
+										"comparison": 3,
+										"width": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "Player_Controller",
+									"sid": 200330952401962,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "set-width",
+									"objectClass": "healthbar_bar",
+									"sid": 310692791253681,
+									"parameters": {
+										"width": "0"
+									}
+								}
+							],
+							"sid": 985925354498681
+						}
+					],
+					"sid": 731799822278748
+				}
+			],
+			"sid": 491995404086007
+		}
+	],
+	"sid": 417246757396439
+}
